@@ -1,111 +1,109 @@
 # PortSentinel AI
 
 ## Description
-PortSentinel AI is an intelligent network security scanner that identifies open ports on a local network and uses AI-based analysis to assess potential security risks. The tool is designed to be used by cybersecurity beginners to quickly identify risky configurations on their network.
+
+PortSentinel AI is an intelligent network port scanner designed for cybersecurity beginners and professionals. It identifies open ports on a network and employs AI-based analysis to assess potential security risks. This version operates without relying on Nmap, using pure Python libraries for enhanced portability and ease of use.
 
 ## Key Features
-- **Secure Port Scanning**: Uses Nmap via Python to scan open ports
-- **Security Checks**: Prevents accidental scanning of external networks
-- **Intelligent Risk Assessment**: Classifies security risks based on open ports
-- **Personalized Recommendations**: Suggests actions to mitigate detected issues
-- **Detailed Reports**: Generates reports in TXT, JSON, and CSV formats
-- **Interactive Interface**: Guides the user through the scanning process
+
+*   **Comprehensive Port Scanning:** Identifies open TCP ports on a target system or network.
+*   **Intelligent Risk Assessment:** Classifies security risks based on identified open ports and known vulnerabilities, using an AI-inspired risk engine.
+*   **Customizable Scan Intensity:** Offers "quick," "standard," and "intensive" scan modes to balance speed and thoroughness.
+*   **Safety Checks:** Prevents accidental scanning of external networks through built-in safety mechanisms.
+*   **Clear Recommendations:** Suggests actions to mitigate identified security issues.
+*   **Detailed Text Reports:** Generates easy-to-understand reports in plain text format.
+*   **Graphical User Interface (GUI):** Provides an interactive experience with simple controls for target selection, scan intensity, and results display.
+*   **Threaded Scanning:** Utilizes multi-threading for faster and more efficient port scanning.
 
 ## Prerequisites
-- Python 3.6+
-- Nmap installed on your system
-- Python modules: python-nmap, ipaddress
+
+*   Python 3.6+
+*   Tkinter (usually included with Python, but may require separate installation on some systems)
+*   No external dependencies are required beyond standard Python libraries.
 
 ## Installation
 
-### 1. Install Nmap
-- **Linux**: `sudo apt-get install nmap`
-- **macOS**: `brew install nmap`
-- **Windows**: Download and install from [nmap.org](https://nmap.org/download.html)
+1.  Ensure you have Python 3.6 or higher installed.
+2.  Download the `port_sentinel.py` file.
 
-### 2. Install Python dependencies
-```bash
-pip install python-nmap ipaddress
-```
-
-### 3. Clone the repository or download the script
-```bash
-git clone https://github.com/yourusername/portsentinel-ai.git
-cd portsentinel-ai
-```
-Or simply download the `portsentinel.py` file.
+    ```bash
+    wget https://github.com/yourusername/portsentinel-ai/blob/main/port_sentinel.py # Or clone the repo if you prefer
+    ```
 
 ## Usage
 
-### Interactive Mode
-Run the script without arguments to start interactive mode:
-```bash
-python portsentinel.py
-```
+### Graphical User Interface (GUI) Mode
 
-The program will guide you through the following steps:
-1. Checking your local IP address
-2. Choosing the scan target (localhost, specific IP, entire network)
-3. Selecting the scan intensity level
-4. Choosing output formats for the reports
+1.  Run the script:
 
-### Command-Line Mode
-You can also use command-line arguments:
-```bash
-python portsentinel.py --target 192.168.1.0/24 --intensity 2 --format txt,json
-```
+    ```bash
+    python port_sentinel.py
+    ```
 
-### Main Options
-- `--target`: IP address, hostname, or CIDR range to scan
-- `--intensity`: Scan intensity level (1=fast, 2=standard, 3=intensive)
-- `--format`: Output report formats (txt, json, csv)
-- `--output-dir`: Directory for reports (default: "reports")
+2.  The PortSentinel AI GUI will appear.
+3.  Enter the target IP address or network range in the "Target IP/Network" field.
+4.  Choose the scan intensity from the "Intensity" dropdown menu (Quick, Standard, or Intensive).
+5.  Check the "Scan Common Ports Only" box to only scan a limited set of common ports.
+6.  Click the "Start Scan" button.
+7.  The scan results and risk assessment will be displayed in the text area.
 
-## Understanding the Results
+### Report Generation
 
-### Risk Levels
-- **CRITICAL**: Severe vulnerability requiring immediate action
-- **HIGH**: Significant risk requiring quick attention
-- **MEDIUM**: Potential security concern to be examined
-- **LOW**: Minimal risk, but worth noting
-- **INFO**: Information that is not considered a risk
+*   The results of the scan, including a risk assessment and recommendations, are displayed directly in the GUI.
+*   To save the report, copy the content from the results text area to a text file.
 
-### Common Ports and Associated Risks
-- 21 (FTP): HIGH - Unencrypted file transfer protocol
-- 22 (SSH): MEDIUM - Secure remote access, but should be limited
-- 23 (Telnet): CRITICAL - Unencrypted remote access protocol
-- 80 (HTTP): MEDIUM - Unencrypted web server
-- 443 (HTTPS): LOW - Encrypted web server (normal)
-- 3389 (RDP): HIGH - Remote desktop protocol, a frequent target for attacks
+### Understanding the Results
 
-## ⚠️ Security Best Practices ⚠️
-1. Only scan networks you have permission to scan
-2. Start by scanning only your own machine (localhost)
-3. Avoid scanning corporate networks without authorization
-4. Close unused ports identified as risky
+#### Risk Levels
 
-## Troubleshooting
+*   **CRITICAL:** Severe vulnerability requiring immediate action.
+*   **HIGH:** Significant risk requiring quick attention.
+*   **MEDIUM:** Potential security concern to be examined.
+*   **LOW:** Minimal risk, but worth noting.
+*   **INFO:** Information that is not considered a risk.
 
-### Nmap Not Detected
-Ensure Nmap is installed and added to your system PATH.
+#### Common Ports and Associated Risks
 
-### Permission Errors
-On Linux/macOS, you may need to run with `sudo` for certain scanning features:
-```bash
-sudo python portsentinel.py
-```
+*   21 (FTP): HIGH - Unencrypted file transfer protocol.
+*   22 (SSH): MEDIUM - Secure remote access, but should be limited.
+*   23 (Telnet): CRITICAL - Unencrypted remote access protocol.
+*   80 (HTTP): MEDIUM - Unencrypted web server.
+*   443 (HTTPS): LOW - Encrypted web server (normal).
+*   3389 (RDP): HIGH - Remote Desktop Protocol, a frequent target for attacks.
 
-### Scan Too Slow
-Use the intensity option `1` for a faster scan or limit your scan to a single IP address.
+⚠️ **Security Best Practices** ⚠️
 
-## Advanced Features
-- **Evolving Knowledge Base**: The tool remembers new port-risk associations
-- **Detailed Service Analysis**: Identifies service versions for more accurate assessment
-- **Detection of Improper Configurations**: Flags combinations of ports that pose a high risk
+*   Only scan networks you have permission to scan.
+*   Start by scanning only your own machine (localhost).
+*   Avoid scanning corporate networks without authorization.
+*   Close unused ports identified as risky.
 
-## 📜 License  
-This project is private and **cannot be used, modified, or distributed without permission**.  
-All rights reserved © 2025.  
+### Troubleshooting
 
-## Disclaimer
+#### GUI Not Displaying Correctly
+
+*   Ensure you have Tkinter installed correctly. On some systems, you may need to install it separately:
+
+    ```bash
+    sudo apt-get install python3-tk  # Debian/Ubuntu
+    ```
+
+#### Scan Too Slow
+
+*   Use the "Quick" intensity option for a faster scan.
+*   Limit your scan to a single IP address.
+
+### Advanced Features
+
+*   Evolving Knowledge Base: The tool remembers new port-risk associations.
+*   Detailed Service Analysis: Identifies service versions for more accurate assessment.
+*   Detection of Improper Configurations: Flags combinations of ports that pose a high risk.
+
+📜 License
+
+This project is private and cannot be used, modified, or distributed without permission.
+All rights reserved © 2025.
+
+### Disclaimer
+
 This tool is intended for educational and defensive security purposes. Use it only on networks for which you have explicit authorization to perform security testing.
