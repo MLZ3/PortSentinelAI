@@ -99,7 +99,7 @@ PortSentinel AI is an intelligent network port scanner designed for cybersecurit
 *   Detailed Service Analysis: Identifies service versions for more accurate assessment.
 *   Detection of Improper Configurations: Flags combinations of ports that pose a high risk.
 
-📜 License
+## Licence
 
 This project is private and cannot be used, modified, or distributed without permission.
 All rights reserved © 2025.
