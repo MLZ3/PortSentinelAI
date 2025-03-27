@@ -45,11 +45,12 @@ python3 main.py
 ```
 
 
-🔒 Confidentialité et utilisation
+## 🔒 Confidentialité et utilisation
 Ce projet est destiné à des fins éducatives et "Blue Team" uniquement. L'utilisation de cet outil est strictement encadré et vous ne pouvez pas faire de scans de ports sur n'importe quelle addresse ip légalement. 
 
-📝 Licence
+
+## 📝 Licence
 Licence Propriétaire - Toute utilisation, modification, distribution, ou reproduction de ce projet sans autorisation explicite écrite du propriétaire est strictement interdite. Ce projet est fourni tel quel, sans garantie d'aucune sorte. L'utilisation non autorisée de ce projet entraînera des poursuites judiciaires. © 2025 Tous Droits Réservés.
 
-👥 Contributeurs
+## 👥 Contributeurs
 Mehdi L - Alexandre Pl - Alexandre Po
