@@ -1,4 +1,4 @@
 flask
 flask_cors
 sentence_transformers
-cpu_faiss
+faiss_cpu
