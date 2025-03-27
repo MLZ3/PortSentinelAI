@@ -1,4 +1,4 @@
-## Installation et Exécution du Projet
+### Installation et Exécution du Projet
 
 ## ℹ️ Introduction
 Ce projet universitaire utilise un modèle de **Retrieval-Augmented Generation (RAG)** basé sur **Sentence Transformers** pour améliorer la récupération d'informations et l'interaction avec les données. Il combine des techniques avancées de traitement du langage naturel et de recherche vectorielle pour offrir des résultats précis et pertinents en allant chercher des CVE pour s'actualiser sur le niveau de criticité des ports ouverts.
