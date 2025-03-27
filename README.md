@@ -37,7 +37,7 @@ python3 cve_faiss.py
 
 Pour démarrer le backend interagissant avec le site :
 ```sh
-python3 main2.py
+python3 main.py
 ```
 
 ---
