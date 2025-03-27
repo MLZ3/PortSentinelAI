@@ -22,8 +22,9 @@ Assurez-vous d'avoir installé :
    ```sh
    npm run dev
    ```
-2. Dans une autre console, installez les dépendances Python :
+2. Dans une autre console, revenez au répertoire parent et installez les dépendances Python :
    ```sh
+   cd ..
    pip install -r requirements.txt
    ```
 
@@ -39,7 +40,4 @@ Pour démarrer le backend interagissant avec le site :
 ```sh
 python3 main.py
 ```
-
----
-🎯 **Conseil** : Pour une exécution fluide, utilisez un gestionnaire de processus comme `pm2` pour Node.js et `supervisor` pour Python.
 
